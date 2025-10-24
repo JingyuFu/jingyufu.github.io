@@ -512,6 +512,7 @@
                                 </div>
 
                         </section>
+
                         <style>
                             /* Art Section Styling */
                             #four {
@@ -521,6 +522,9 @@
 
                             #four .container {
                                 max-width: 1200px;
+                                width: 100%;
+                                padding: 0 1em;
+                                box-sizing: border-box;
                             }
 
                             #four h3 {
@@ -540,9 +544,10 @@
                             /* Art Grid Layout */
                             .art-grid {
                                 display: grid;
-                                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                                grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
                                 gap: 2.5em;
                                 margin-top: 2em;
+                                width: 100%;
                             }
 
                             /* Individual Project Card */
@@ -552,6 +557,9 @@
                                 padding: 2em;
                                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
                                 transition: all 0.3s ease;
+                                width: 100%;
+                                max-width: 100%;
+                                box-sizing: border-box;
                             }
 
                             .art-project:hover {
@@ -574,6 +582,7 @@
                                 font-size: 1.5em;
                                 margin: 0;
                                 flex: 1;
+                                min-width: 0;
                             }
 
                             .project-tag {
@@ -583,6 +592,7 @@
                                 border-radius: 20px;
                                 font-size: 0.85em;
                                 font-weight: 600;
+                                flex-shrink: 0;
                             }
 
                             .project-description {
@@ -594,9 +604,10 @@
                             /* Character Grid - 2x2 layout */
                             .character-grid {
                                 display: grid;
-                                grid-template-columns: repeat(2, 1fr);
+                                grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
                                 gap: 1.5em;
                                 margin-bottom: 2em;
+                                width: 100%;
                             }
 
                             .character-item {
@@ -608,6 +619,9 @@
                                 justify-content: center;
                                 transition: all 0.3s ease;
                                 border: 3px solid #e5e7eb;
+                                min-height: 100px;
+                                width: 100%;
+                                box-sizing: border-box;
                             }
 
                             .character-item:hover {
@@ -617,9 +631,10 @@
                             }
 
                             .character-item img {
-                                max-width: 120px;
-                                max-height: 120px;
+                                max-width: 100%;
+                                width: auto;
                                 height: auto;
+                                max-height: 150px;
                                 display: block;
                             }
 
@@ -637,11 +652,16 @@
                                 padding: 1.5em;
                                 text-align: center;
                                 border: 3px solid #e5e7eb;
+                                width: 100%;
+                                box-sizing: border-box;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
                             }
 
                             .group-shot img {
-                                max-width: 350px;
-                                width: 100%;
+                                max-width: 100%;
+                                width: auto;
                                 height: auto;
                                 border-radius: 4px;
                                 margin: 0 auto;
@@ -659,8 +679,9 @@
                             /* Workflow Grid - 2x2 layout */
                             .workflow-grid {
                                 display: grid;
-                                grid-template-columns: repeat(2, 1fr);
+                                grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
                                 gap: 1em;
+                                width: 100%;
                             }
 
                             .workflow-item {
@@ -669,7 +690,10 @@
                                 overflow: hidden;
                                 transition: all 0.3s ease;
                                 border: 3px solid #e5e7eb;
+                                min-height: 150px;
                                 height: 200px;
+                                width: 100%;
+                                box-sizing: border-box;
                             }
 
                             .workflow-item:hover {
@@ -692,6 +716,8 @@
                                 background: linear-gradient(to right, #faf5ff, #f3e8ff);
                                 border-radius: 10px;
                                 border-left: 4px solid #a78bfa;
+                                width: 100%;
+                                box-sizing: border-box;
                             }
 
                             .character-name {
@@ -715,6 +741,7 @@
                                 gap: 1em;
                                 overflow-x: auto;
                                 padding: 1em 0;
+                                width: 100%;
                             }
 
                             .process-step {
@@ -729,12 +756,15 @@
                             .step-image {
                                 width: 140px;
                                 height: 140px;
+                                min-width: 100px;
+                                min-height: 100px;
                                 background: white;
                                 border-radius: 8px;
                                 overflow: hidden;
                                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
                                 transition: all 0.3s ease;
                                 border: 3px solid #e5e7eb;
+                                box-sizing: border-box;
                             }
 
                             .step-image:hover {
@@ -793,6 +823,8 @@
                                 background: linear-gradient(135deg, #faf5ff, #f3e8ff);
                                 border-radius: 10px;
                                 border-left: 4px solid #8b5cf6;
+                                width: 100%;
+                                box-sizing: border-box;
                             }
 
                             .gallery-title {
@@ -803,6 +835,7 @@
                                 display: flex;
                                 align-items: center;
                                 gap: 0.8em;
+                                flex-wrap: wrap;
                             }
 
                             .wip-badge {
@@ -826,6 +859,7 @@
                                 position: relative;
                                 margin: 0 auto;
                                 max-width: 100%;
+                                width: 100%;
                             }
 
                             .gallery-scroll {
@@ -836,6 +870,7 @@
                                 padding: 1em 0.5em;
                                 scrollbar-width: thin;
                                 scrollbar-color: #a78bfa #f3e8ff;
+                                width: 100%;
                             }
 
                             .gallery-scroll::-webkit-scrollbar {
@@ -859,11 +894,14 @@
                             .gallery-item {
                                 flex: 0 0 auto;
                                 width: 200px;
+                                min-width: 150px;
                             }
 
                             .gallery-image {
                                 width: 200px;
                                 height: 200px;
+                                min-width: 150px;
+                                min-height: 150px;
                                 background: white;
                                 border-radius: 8px;
                                 overflow: hidden;
@@ -873,6 +911,7 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                box-sizing: border-box;
                             }
 
                             .gallery-image:hover {
@@ -951,15 +990,36 @@
                             }
 
                             /* Responsive Design */
+                            @media screen and (max-width: 900px) {
+                                .character-grid {
+                                    grid-template-columns: 1fr;
+                                    gap: 1.2em;
+                                }
+
+                                .character-item {
+                                    padding: 1em;
+                                    min-height: 120px;
+                                    max-width: 400px;
+                                    margin: 0 auto;
+                                }
+                            }
+
                             @media screen and (max-width: 768px) {
+                                #four {
+                                    padding: 3em 0;
+                                }
+
+                                #four .container {
+                                    padding: 0 0.5em;
+                                }
+
                                 .art-grid {
                                     grid-template-columns: 1fr;
                                     gap: 2em;
                                 }
 
-                                .character-grid {
-                                    grid-template-columns: repeat(2, 1fr);
-                                    gap: 1em;
+                                .art-project {
+                                    padding: 1.5em;
                                 }
 
                                 .workflow-grid {
@@ -968,19 +1028,12 @@
                                 }
 
                                 .workflow-item {
-                                    height: 250px;
-                                }
-
-                                .group-shot img {
-                                    max-width: 300px;
+                                    height: 200px;
+                                    min-height: 150px;
                                 }
 
                                 #four h3 {
                                     font-size: 2em;
-                                }
-
-                                .art-project {
-                                    padding: 1.5em;
                                 }
 
                                 .process-timeline {
@@ -997,12 +1050,16 @@
 
                                 .process-step {
                                     min-width: 100%;
+                                    max-width: 300px;
+                                    margin: 0 auto;
                                 }
 
                                 .step-image {
                                     width: 100%;
-                                    max-width: 180px;
-                                    height: 180px;
+                                    max-width: 140px;
+                                    height: 140px;
+                                    min-width: 100px;
+                                    min-height: 100px;
                                     margin: 0 auto;
                                 }
 
@@ -1011,12 +1068,15 @@
                                 }
 
                                 .gallery-item {
-                                    width: 180px;
+                                    width: 160px;
+                                    min-width: 140px;
                                 }
 
                                 .gallery-image {
-                                    width: 180px;
-                                    height: 180px;
+                                    width: 160px;
+                                    height: 160px;
+                                    min-width: 140px;
+                                    min-height: 140px;
                                 }
 
                                 .gallery-nav {
@@ -1025,18 +1085,81 @@
                             }
 
                             @media screen and (max-width: 480px) {
-                                .character-grid {
-                                    grid-template-columns: 1fr;
+                                #four .container {
+                                    padding: 0 0.75em;
                                 }
 
-                                .character-item img {
-                                    max-width: 150px;
-                                    max-height: 150px;
+                                .art-project {
+                                    padding: 1em;
+                                }
+
+                                .character-item {
+                                    padding: 0.6em;
+                                    min-height: 120px;
                                 }
 
                                 .project-header {
                                     flex-direction: column;
                                     align-items: flex-start;
+                                }
+
+                                .workflow-item {
+                                    height: 180px;
+                                    min-height: 120px;
+                                }
+
+                                .group-shot {
+                                    padding: 1em;
+                                }
+
+                                .process-step {
+                                    min-width: 100%;
+                                    max-width: 250px;
+                                }
+
+                                .step-image {
+                                    width: 120px;
+                                    height: 120px;
+                                    min-width: 100px;
+                                    min-height: 100px;
+                                }
+                            }
+
+                            @media screen and (max-width: 360px) {
+                                .art-grid {
+                                    gap: 1.5em;
+                                }
+
+                                .art-project {
+                                    padding: 0.75em;
+                                }
+
+                                .character-item {
+                                    min-height: 100px;
+                                }
+
+                                .workflow-item {
+                                    height: 150px;
+                                    min-height: 100px;
+                                }
+
+                                .step-image {
+                                    width: 100px;
+                                    height: 100px;
+                                    min-width: 80px;
+                                    min-height: 80px;
+                                }
+
+                                .gallery-item {
+                                    width: 150px;
+                                    min-width: 120px;
+                                }
+
+                                .gallery-image {
+                                    width: 150px;
+                                    height: 150px;
+                                    min-width: 120px;
+                                    min-height: 120px;
                                 }
                             }
 
